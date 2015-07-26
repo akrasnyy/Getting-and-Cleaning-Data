@@ -75,7 +75,7 @@ full_data <- data_x_mean_std %>% cbind(datasubj) %>% cbind(data_y_full)
 
 ## Add  description of activities by activity ID from activity_labels.txt for all measures even if not present in the refering data.frame
 
-full_data <- full_data %>% merge(Activity_names, by.x = "Activity", by.y = "Activity_ID", all.x = TRUE)
+full_data <- full_data %>% merge(Activity, by.x = "Activity", by.y = "Activity_ID", all.x = TRUE)
 
 
 ## Rename full data frame with meaningfull names 
